@@ -1,15 +1,15 @@
 <template>
   <div>
-    我是购物车页
+    <nav-bar title="商品评论"/>
+    <comment :cid="$route.query.id"></comment>
   </div>
 </template>
 <script>
   export default {
-    name: 'shopcar',
     data() {
       return {
-        
+
       }
-    }
+    },
   }
 </script>

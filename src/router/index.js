@@ -3,13 +3,14 @@ import Router from 'vue-router'
 import Home from '@/components/Home'
 import Member from '@/components/Member'
 import Search from '@/components/Search'
-import Shopcar from '@/components/Shopcar'
 import NewList from '@/components/News/NewsList'
 import NewsDetail from '@/components/News/NewsDetail'
 import PhotoList from '@/components/photo/PhotoList'
 import PhotoDetail from '@/components/photo/PhotoDetail'
 import GoodsList from '@/components/goods/GoodsList'
 import GoodsDetail from '@/components/goods/GoodsDetail'
+import GoodsComment from '@/components/goods/GoodsComment'
+import ShopCart from '@/components/ShopCart/ShopCart'
 
 Vue.use(Router)
 
@@ -31,10 +32,6 @@ export default new Router({
       path: '/search',
       name: 'search',
       component: Search
-    }, {
-      path: '/shopcar',
-      name: 'shopcar',
-      component: Shopcar
     }, {
       // 新闻列表
       path: '/news/list',
@@ -62,6 +59,19 @@ export default new Router({
       path: '/goods/detail/:id',
       name: 'goods.detail',
       component: GoodsDetail,
+    }, {
+      // 商品图文介绍
+      path: '/goods/photo/info',
+      name: 'photo.info',
+      component: NewsDetail,
+    }, {
+      path: '/goods/comment',
+      name: 'goods.comment',
+      component: GoodsComment,
+    }, {
+      path: '/shopcart',
+      name: 'shopcart',
+      component: ShopCart,
     }
   ]
 })
